@@ -1,9 +1,235 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.App {
+  font-family: 'Epilogue', sans-serif;
+  background-image: url(./asset/ego5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  height: 100vh;
+}
+
 MainPage {
-  background-image: url(./asset/ego1.png);
+  position: relative;
+}
+
+.Mainpage {
+  margin: auto;
+  width: 93%;
+  padding-top: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  margin-right: 2vw;
+  margin-top: 1rem;
+}
+
+.Link_signup {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+
+  position: relative;
+}
+
+.LogoLink {
+  text-decoration: none;
+  color: black;
+  margin-right: 5vw;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  width: 60%;
+  line-height: 0.6cm;
+  margin-bottom: 1.5rem;
+}
+
+.navigation {
+  display: flex;
+}
+
+.Signup_Button {
+  padding: 1rem 3rem;
+  background-color: transparent;
+  color: #000000;
+  border-radius: 0.2rem;
+  border: solid 0.2rem #000000;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  border-radius: 0.2rem;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.Link_signup:hover .overlay {
+  width: 100%;
+}
+
+.arrow {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.Body_text {
+  float: right;
+  width: 40%;
+  margin-top: 35vh;
+}
+
+.ms_slider {
+  display: inline-block;
+  height: 1.5em;
+  overflow: hidden;
+  vertical-align: middle;
+  mask-image: linear-gradient(transparent, white, white, white, transparent);
+  mask-type: luminance;
+  mask-mode: alpha;
+}
+
+.ms_slider_words {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation-name: wordSlider;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+}
+
+.ms_slider_word {
+  display: block;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+.getStarted {
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.getStarted_Button {
+  padding: 1.1rem 3rem;
+  background-color: #ec3d07;
+  border-radius: 0.2rem;
+  color: white;
+  transition: all 0.5s;
+}
+
+.getStarted_Button:after {
+  content: '>';
+  font-size: 1.5rem;
+  position: absolute;
+  opacity: 0;
+  top: 12px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.getStarted_Button:hover {
+  padding-right: 4rem;
+  padding-left: 2rem;
+}
+
+.getStarted_Button:hover:after {
+  opacity: 1;
+  right: 2.2rem;
+}
+
+span {
+  display: flex;
+}
+
+.itsFree {
+  margin-top: 1.1rem;
+  margin-left: 2rem;
+}
+
+@-webkit-keyframes wordSlider {
+  0%,
+  27% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  33%,
+  60% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  66%,
+  93% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%);
+  }
+}
+
+@keyframes wordSlider {
+  0%,
+  27% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+  33%,
+  60% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  66%,
+  93% {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%);
+  }
 }
