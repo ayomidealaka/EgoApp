@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import MainPage from './Components/MainPage';
 
-import './App.css';
+import style from './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className={style.App}>
         <MainPage />
       </div>
     );
