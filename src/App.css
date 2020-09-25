@@ -9,14 +9,12 @@
 
 .App {
   font-family: 'Epilogue', sans-serif;
-  background-image: url(./asset/ego5.png);
+  background-image: url(./asset/ego6.png);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  min-width: 100%;
-  min-height: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 MainPage {
@@ -48,8 +46,9 @@ nav {
   font-weight: 500;
   text-decoration: none;
   color: black;
-
+  display: flex;
   position: relative;
+  justify-content: space-between;
 }
 
 .LogoLink {
@@ -76,14 +75,30 @@ h3 {
 }
 
 .Signup_Button {
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   background-color: transparent;
   color: #000000;
   border-radius: 0.2rem;
   border: solid 0.2rem #000000;
+  text-decoration: none;
 }
 
-.overlay {
+.Signup_Button:hover {
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 0.2rem;
+}
+
+.Login_Button {
+  color: #000000;
+  border-radius: 0.2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+/* .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -94,11 +109,11 @@ h3 {
   width: 0;
   height: 100%;
   transition: 0.5s ease;
-}
+} */
 
-.Link_signup:hover .overlay {
+/* .Link_signup:hover .overlay {
   width: 100%;
-}
+} */
 
 .arrow {
   color: white;
@@ -111,6 +126,10 @@ h3 {
   white-space: nowrap;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+.menuIcon {
+  display: none;
 }
 
 .Body_text {
@@ -231,5 +250,89 @@ span {
   100% {
     -webkit-transform: translateY(-75%);
     transform: translateY(-75%);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .App {
+    background-image: url(./asset/ego7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+  }
+
+  .Body_text {
+    float: none;
+    margin: auto;
+    width: 70%;
+    margin-top: 15vh;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin: auto;
+    line-height: 0.6cm;
+    margin-bottom: 1.5rem;
+  }
+
+  span {
+    margin: auto;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    background: #e6def0;
+    min-width: 470px;
+    min-height: 1020px;
+  }
+
+  .Signup_Button {
+    padding: 1rem 1rem;
+    background-color: transparent;
+    color: #000000;
+    border-radius: 0.2rem;
+    border: solid 0.2rem #000000;
+    text-decoration: none;
+  }
+
+  .Signup_Button:hover {
+    padding: 1rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0.2rem;
+  }
+
+  .getStarted_Button {
+    padding: 1.1rem 3rem;
+    background-color: #ec3d07;
+    border-radius: 0.2rem;
+    color: white;
+    transition: all 0.5s;
+  }
+
+  .getStarted_Button:after {
+    display: none;
+  }
+
+  .getStarted_Button:hover {
+    padding: 1.1rem 3rem;
+  }
+
+  .getStarted_Button:hover:after {
+    opacity: 0;
+    right: 0rem;
   }
 }
