@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import MainPage from './Components/MainPage';
 
+import MainPage from './Components/MainPage';
 import style from './App.css';
 
 class App extends Component {
