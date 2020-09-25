@@ -2,7 +2,7 @@ import React from 'react';
 
 import logo from './../asset/logo.png';
 import style from './../App.css';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -22,12 +22,17 @@ const Navbar = () => {
           Plans
         </Link>
       </div>
-      <Link to="/signup" className={style.Link_signup}>
-        <div className={style.Signup_Button}>Sign Up</div>
-        <div className={style.overlay}>
+      <div to="/signup" className={style.Link_signup}>
+        <Link to="/login" className={style.Login_Button}>
+          Login
+        </Link>
+        <Link to="/signup" className={style.Signup_Button}>
+          Sign Up
+        </Link>
+        {/* <div className={style.overlay}>
           <div className={style.arrow}>Sign Up</div>
-        </div>
-      </Link>
+        </div> */}
+      </div>
     </nav>
   );
 };
