@@ -1,8 +1,7 @@
 import React from 'react';
 
-import logo from './../asset/face1.PNG';
 import style from './../App.css';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Body = () => {
   return (
